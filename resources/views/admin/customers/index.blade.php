@@ -39,7 +39,6 @@
                         <th>@lang('quickadmin.customers.fields.phone')</th>
                         <th>@lang('quickadmin.customers.fields.email')</th>
                         <th>@lang('quickadmin.customers.fields.country')</th>
-                        <th>@lang('quickadmin.customers.fields.dni')</th>
                         @if( request('show_deleted') == 1 )
                         <th>&nbsp;</th>
                         @else
@@ -62,7 +61,6 @@
                                 <td field-key='phone'>{{ $customer->phone }}</td>
                                 <td field-key='email'>{{ $customer->email }}</td>
                                 <td field-key='country'>{{ $customer->country->title or '' }}</td>
-                                <td field-key='country'>{{ $customer->dni}}</td>
                                 @if( request('show_deleted') == 1 )
                                 <td>
                                     @can('customer_delete')

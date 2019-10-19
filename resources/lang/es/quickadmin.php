@@ -44,7 +44,6 @@ return [
 			'phone' => 'Telefono',
 			'email' => 'Email',
 			'country' => 'Pais',
-            'dni' => 'DNI / Identificacion / Rut'
 		],
 	],
 	

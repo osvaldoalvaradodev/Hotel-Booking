@@ -51,7 +51,6 @@ return [
 			'phone' => 'Phone',
 			'email' => 'Email',
 			'country' => 'Country',
-            'dni' => 'DNI',
 		],
 	],
 	
