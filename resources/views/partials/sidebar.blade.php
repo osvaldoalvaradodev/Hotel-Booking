@@ -103,6 +103,16 @@
                 </a>
             </li>
             @endcan
+
+
+            @can('client_access')
+                <li class="{{ $request->segment(2) == 'clients' ? 'active' : '' }}">
+                    <a href="{{ route('admin.clients.index') }}">
+                        <i class="fa fa-arrows"></i>
+                        <span class="title">@lang('quickadmin.clients.title')</span>
+                    </a>
+                </li>
+            @endcan
             
 
             

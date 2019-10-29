@@ -25,7 +25,17 @@ return [
 			'remember-token' => 'Recordar Token',
 		],
 	],
-	
+
+
+    'clients' => [
+        'title' => 'Clientes',
+        'fields' => [
+            'name' => 'Nombre',
+            'email' => 'Email',
+            'phone' => 'Telefono',
+        ],
+    ],
+
 	'countries' => [
 		'title' => 'Paises',
 		'fields' => [
@@ -36,7 +46,7 @@ return [
 	],
 	
 	'customers' => [
-		'title' => 'Cliente',
+		'title' => 'Huesped',
 		'fields' => [
 			'first-name' => 'Nombres',
 			'last-name' => 'Apellidos',
@@ -59,7 +69,7 @@ return [
 	'bookings' => [
 		'title' => 'Bookings',
 		'fields' => [
-			'customer' => 'Cliente',
+			'customer' => 'Huesped',
 			'room' => 'Habitacion',
 			'time-from' => 'Desde',
 			'time-to' => 'Hasta',

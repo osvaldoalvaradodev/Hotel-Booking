@@ -153,5 +153,10 @@ class AuthServiceProvider extends ServiceProvider
             return in_array($user->role_id, [1]);
         });
 
+
+        Gate::define('client_access', function ($user) {
+            return in_array($user->role_id, [1]);
+        });
+
     }
 }

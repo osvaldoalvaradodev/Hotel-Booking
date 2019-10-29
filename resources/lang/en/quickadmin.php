@@ -25,8 +25,20 @@ return [
 			'remember-token' => 'Remember token',
 		],
 	],
-	
-	'countries' => [
+
+
+
+    'clients' => [
+        'title' => 'Clients',
+        'fields' => [
+            'name' => 'Name',
+            'email' => 'Email',
+            'phone' => 'Phone',
+        ],
+    ],
+
+
+    'countries' => [
 		'title' => 'Countries',
 		'fields' => [
 			'shortcode' => 'Shortcode',

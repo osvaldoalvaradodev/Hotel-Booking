@@ -48,6 +48,14 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
     Route::post('bookings_mass_destroy', ['uses' => 'Admin\BookingsController@massDestroy', 'as' => 'bookings.mass_destroy']);
     Route::post('bookings_restore/{id}', ['uses' => 'Admin\BookingsController@restore', 'as' => 'bookings.restore']);
     Route::delete('bookings_perma_del/{id}', ['uses' => 'Admin\BookingsController@perma_del', 'as' => 'bookings.perma_del']);
+
+
+    Route::resource('clients', 'Admin\ClientsController', ['except' => 'clients.create']);
+    Route::get('clients/create/', ['as' => 'clients.create', 'uses' => 'Admin\ClientsController@create']);
+    Route::post('clients_mass_destroy', ['uses' => 'Admin\ClientsController@massDestroy', 'as' => 'clients.mass_destroy']);
+    Route::post('clients_restore/{id}', ['uses' => 'Admin\ClientsController@restore', 'as' => 'clients.restore']);
+    Route::delete('clients_perma_del/{id}', ['uses' => 'Admin\ClientsController@perma_del', 'as' => 'clients.perma_del']);
+
     //Route::resource('/find_rooms', 'Admin\FindRoomsController', ['except' => 'create']);
     Route::get('/find_rooms', 'Admin\FindRoomsController@index')->name('find_rooms.index');
     Route::post('/find_rooms', 'Admin\FindRoomsController@index');
