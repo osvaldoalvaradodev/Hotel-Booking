@@ -71,6 +71,19 @@
                     @endif
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-xs-12 form-group">
+                    {!! Form::label('amount', trans('quickadmin.bookings.fields.amount').'*', ['class' => 'control-label']) !!}
+                    {!! Form::textarea('amount', old('amount'), ['class' => 'form-control ', 'placeholder' => '', 'required' => '']) !!}
+                    <p class="help-block"></p>
+                    @if($errors->has('additional_information'))
+                        <p class="help-block">
+                            {{ $errors->first('additional_information') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
             
         </div>
     </div>

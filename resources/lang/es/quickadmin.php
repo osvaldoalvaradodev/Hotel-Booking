@@ -74,7 +74,8 @@ return [
 			'time-from' => 'Desde',
 			'time-to' => 'Hasta',
 			'additional-information' => 'Informacion Adicional',
-            'amount' => 'Monto'
+            'amount' => 'Monto',
+            'client' => 'Cliente'
 		],
 	],
 	
@@ -83,6 +84,9 @@ return [
 		'fields' => [
 		],
 	],
+    'reports' =>[
+      'title' => 'Reporte Bookings'
+    ],
 	'qa_create' => 'Crear',
 	'qa_save' => 'Guardar',
 	'qa_edit' => 'Editar',

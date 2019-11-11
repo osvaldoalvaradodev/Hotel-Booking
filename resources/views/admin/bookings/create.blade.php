@@ -22,6 +22,21 @@
                     @endif
                 </div>
             </div>
+
+
+            <div class="row">
+                <div class="col-xs-12 form-group">
+                    {!! Form::label('client_id', trans('quickadmin.bookings.fields.client').' *', ['class' => 'control-label']) !!}
+                    {!! Form::select('client_id', $clients, old('client_id'), ['class' => 'form-control select2']) !!}
+                    <p class="help-block"></p>
+                    @if($errors->has('client_id'))
+                        <p class="help-block">
+                            {{ $errors->first('client_id') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
+
             <div class="row">
                 <div class="col-xs-12 form-group">
                     {!! Form::label('room_id', trans('quickadmin.bookings.fields.room').'', ['class' => 'control-label']) !!}

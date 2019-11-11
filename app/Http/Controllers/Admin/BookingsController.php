@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Gate;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\StoreBookingsRequest;
 use App\Http\Requests\Admin\UpdateBookingsRequest;
+use App\Clients;
 
 class BookingsController extends Controller
 {
@@ -51,7 +52,8 @@ class BookingsController extends Controller
         $customers = Customer::get()->pluck('full_name', 'id')->prepend(trans('quickadmin.qa_please_select'), '');
         $rooms = Room::get()->pluck('room_number', 'id')->prepend(trans('quickadmin.qa_please_select'), '');
 
-        return view('admin.bookings.create', compact('customers', 'rooms'));
+        $clients = Clients::get()->pluck('name','id');
+        return view('admin.bookings.create', compact('customers', 'rooms','clients'));
     }
 
     /**
